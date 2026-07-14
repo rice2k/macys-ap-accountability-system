@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
+  <rect width="900" height="520" fill="#f4f4f4"/>
+  <rect x="34" y="34" width="832" height="452" rx="12" fill="#ffffff" stroke="#cccccc"/>
+  <rect x="34" y="34" width="832" height="68" rx="12" fill="#111111"/>
+  <text x="62" y="76" font-family="Segoe UI, Arial" font-size="28" font-weight="700" fill="#ffffff">Front Desk Screenshot Placeholder</text>
+  <g font-family="Segoe UI, Arial" font-size="18" fill="#111111">
+    <rect x="62" y="132" width="740" height="54" rx="8" fill="#f8f9fa" stroke="#cccccc"/>
+    <text x="82" y="166" font-weight="700">Operator &gt; Employee &gt; Asset &gt; Due Time &gt; Complete</text>
+    <rect x="62" y="222" width="230" height="150" rx="8" fill="#ffffff" stroke="#cccccc"/>
+    <text x="82" y="264" font-weight="700">Selected Employee</text>
+    <text x="82" y="300">Profile card</text>
+    <rect x="332" y="222" width="230" height="150" rx="8" fill="#ffffff" stroke="#cccccc"/>
+    <text x="352" y="264" font-weight="700">Selected Asset</text>
+    <text x="352" y="300">Status and holder</text>
+    <rect x="602" y="222" width="200" height="150" rx="8" fill="#f0fff6" stroke="#198754"/>
+    <text x="622" y="264" font-weight="700">Checkout</text>
+    <text x="622" y="300">Return actions</text>
+    <text x="82" y="430">Replace with a real checkout/return workflow screenshot.</text>
+  </g>
+</svg>
+
