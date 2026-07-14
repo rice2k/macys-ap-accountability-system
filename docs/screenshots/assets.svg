@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
+  <rect width="900" height="520" fill="#f4f4f4"/>
+  <rect x="34" y="34" width="832" height="452" rx="12" fill="#ffffff" stroke="#cccccc"/>
+  <rect x="34" y="34" width="832" height="68" rx="12" fill="#111111"/>
+  <text x="62" y="76" font-family="Segoe UI, Arial" font-size="28" font-weight="700" fill="#ffffff">Assets Screenshot Placeholder</text>
+  <g font-family="Segoe UI, Arial" font-size="18" fill="#111111">
+    <rect x="62" y="128" width="740" height="56" rx="8" fill="#f8f9fa" stroke="#cccccc"/>
+    <text x="82" y="164" font-weight="700">Find | Type | Status | Sort | Manage | Excel | More</text>
+    <rect x="62" y="218" width="740" height="220" rx="8" fill="#ffffff" stroke="#cccccc"/>
+    <line x1="62" y1="268" x2="802" y2="268" stroke="#cccccc"/>
+    <line x1="62" y1="318" x2="802" y2="318" stroke="#eeeeee"/>
+    <line x1="62" y1="368" x2="802" y2="368" stroke="#eeeeee"/>
+    <text x="82" y="250" font-weight="700">Type</text>
+    <text x="190" y="250" font-weight="700">Barcode</text>
+    <text x="342" y="250" font-weight="700">Name</text>
+    <text x="520" y="250" font-weight="700">Status</text>
+    <text x="82" y="300">Key</text>
+    <text x="190" y="300">KEY-001</text>
+    <text x="342" y="300">Key Ring 001</text>
+    <text x="520" y="300">Available</text>
+    <text x="82" y="468">Replace with asset list and Add/Edit Asset screenshot.</text>
+  </g>
+</svg>
+
