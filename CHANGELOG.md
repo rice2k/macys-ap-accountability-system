@@ -1,6 +1,42 @@
 # Changelog
 
-## v5.2.7 - Latest Verified Build
+## v5.2.7 Flow + Visual Polish - July 13, 2026
+
+### Added
+
+- Admin-only Front Desk Scan-Only Mode.
+- Scan-only checkout flow: scan employee badge, scan item, complete checkout.
+- Scan-only return flow: scan return-by badge, scan checked-out item, complete return.
+- Return acceptance by any scanned return-by badge, even when different from the original checkout holder.
+- Notes/audit labeling for Scan-Only Front Desk checkout and return.
+- Front Desk large next-step banner.
+- Front Desk Checkout Mode / Return Mode / Scan-Only Mode label.
+- Quick Scan controls for New Checkout, Return Item, Next Item Same Employee, and Quick Guide.
+- Function-key shortcuts for scanner stations: F2, F3, F4, F8, F9, Esc.
+- Manager Today's Priorities strip for Backup, Late Returns, Alerts, and Open Assets.
+- Manager Only Show Problems toggle.
+- Printable Quick Scan guide export.
+- Training Mode demo reset for sample users/assets.
+- Public GitHub visuals and documentation images.
+- `app/` source package folder in the public repo.
+
+### Changed
+
+- Return flow no longer blocks when the return-by badge differs from the original checkout holder.
+- Different-badge returns are recorded in notes/audit without Manager/Admin approval.
+- Front Desk buttons enable only when the current action is ready.
+- Front Desk step tracker adapts between checkout and return.
+- Manager backup display now emphasizes last backup date/time and refresh countdown.
+- Asset entry keeps fields specific to the selected asset type.
+- README, How It Works, Data Info, Screenshots, Features, Versions, and Public Upload docs now match the latest workflow.
+
+### Validation
+
+- Self-test result: PASS.
+- Syntax check: PASS.
+- ZIP rebuilt: `Macys_AP_v5_2_7_Flow_Visual_Polish_20260713.zip`.
+
+## v5.2.7 Asset Entry / Manager / Export Upgrade
 
 ### Added
 
@@ -30,18 +66,11 @@
 - Reports are grouped by Daily, History, Export, and Output.
 - Tables use consistent row striping, selected-row styling, and scrollbars.
 
-### Security And Safety
+### Safety
 
 - Restricted checkout conditions require Manager/Admin access.
 - Critical/blocking AP alerts require Manager/Admin access.
-- Wrong-user returns require Manager/Admin access and reason entry.
 - Group rights changes require a reason.
 - Group deletion requires a reason before moving assigned users.
 - Old log cleanup archives records before deleting them.
 - Restore backs up the active database first.
-
-### Validation
-
-- Self-test result: PASS.
-- Validated database creation, default admin, seeded groups/assets, asset mapping, asset details, checkout, double-checkout guard, return, status updates, Excel write, counts, dashboard type counts, manager notifications, AP alerts, audit/error records, rich log fields, and cleanup.
-

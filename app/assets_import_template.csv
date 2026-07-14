@@ -1,0 +1,8 @@
+﻿asset_type,barcode,name,status,location,controlled_key_number,serial_number,notes,key_set_number,key_ring_serial_number,number_of_keys,key_ring_location,key_ring_use,key_1_serial,key_1_access,key_2_serial,key_2_access,radio_number,factory_serial_number,radio_serial_number,radio_location,assigned_area,tablet_number,tablet_factory_serial_number,imei_number,windows_license_key,tablet_location,accessories,other_accessory,badge_number,badge_location,scanner_number,scanner_serial_number,scanner_location,item_number,item_location,item_use,asset_number,asset_location,asset_use
+Key,KEY-001,Key Ring 001,Available,AP,001,,Example key,001,KEYRING001,2,AP,AP office/control rooms,K001,AP Office,K002,Control Room,,,,,,,,,,,,,,,,,,,,,,,
+Radio,RADIO-001,Radio 001,Available,AP,,RAD001,Example radio,,,,,,,,,,RADIO-001,FAC-RAD001,RAD001,AP,Floor AP,,,,,,,,,,,,,,,,,,
+Temp Badge,TEMP-001,Temp Badge 001,Available,Front Desk,,,Example temp badge,,,,,,,,,,,,,,Front Desk,,,,,,,,TEMP-001,Front Desk,,,,,,,,,
+Scanner,SCAN-001,Scanner 001,Available,Front Desk,,SCAN001,Example scanner,,,,,,,,,,,,,,,,,,,,,,,,SCAN-001,SCAN001,Front Desk,,,,,,
+Tablet,TAB-001,Tablet 001,Available,AP,,TAB001,Example tablet,,,,,,,,,,,,,,AP,TAB-001,TAB-FAC001,IMEI001,WIN-KEY,AP,Tablet cover;Charging cable,,,,,,,,,,,,
+Item,ITEM-001,Equipment Pouch 001,Available,Front Desk,,,Example item,,,,,,,,,,,,,,,,,,,,,,,,,,,ITEM-001,Front Desk,Equipment storage,,,
+Other,OTHER-001,Other Asset 001,Available,AP,,,Example other asset,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,OTHER-001,AP,Special asset

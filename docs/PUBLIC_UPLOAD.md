@@ -1,96 +1,58 @@
 # Public GitHub Upload
 
-This package is ready for a public GitHub repository or public GitHub Pages site. Because the app supports AP operations and can contain sensitive employee, asset, alert, log, and backup data, only sanitized documentation and approved source files should be uploaded.
+This repo is public. Keep it clean, useful, and safe.
 
-## Recommended Public Repository Setup
+## Uploaded In This Repo
 
-1. Create a new GitHub repository.
-2. Set visibility to Public.
-3. Upload this documentation package.
-4. Keep `README.md` at the repository root.
-5. Confirm `.gitignore` is present before adding app files.
-6. Add app source files only if they are approved for public release.
-7. Do not upload live `.db`, backup ZIPs, exports, reports, logs, employee data, badge numbers, AP alert details, or incident notes.
+- Public README and docs.
+- Sanitized visuals with sample data.
+- Current source package in `app/`.
+- Self-test results that do not contain live data.
+- Issue templates.
+- Security and public upload notes.
+
+The release ZIP is uploaded as a GitHub Release asset instead of being committed to the repo.
+
+## Do Not Upload
+
+- `.db`, `.sqlite`, `.sqlite3`.
+- Live backup ZIPs.
+- Live exports.
+- Live reports.
+- Live logs.
+- Real employee names.
+- Real badge numbers.
+- Real AP alert details.
+- Incident notes.
+- Store-specific paths.
+- Network share paths.
+- Screenshots showing live data.
+
+## Safe Screenshot Rules
+
+- Use sample users and sample assets.
+- Blur/hide database paths and usernames.
+- Never show live AP alerts or incident notes.
+- Never show live checkout history.
+- Prefer sample Training Mode data.
 
 ## GitHub Pages Setup
 
-1. Go to the repository on GitHub.
-2. Open Settings.
+1. Open the repo on GitHub.
+2. Go to Settings.
 3. Open Pages.
-4. Under Build and deployment, choose Deploy from a branch.
-5. Choose the main branch and root folder.
+4. Choose Deploy from a branch.
+5. Choose `main` and root.
 6. Save.
-7. Wait a few minutes, then open the GitHub Pages URL.
 
-Official GitHub references:
-
-- Repository visibility: https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility
-- GitHub Pages quickstart: https://docs.github.com/pages/quickstart
-
-## What To Upload
-
-Safe for public upload:
-
-- `README.md`
-- `CHANGELOG.md`
-- `SECURITY.md`
-- `docs/`
-- `.github/ISSUE_TEMPLATE/`
-- `_config.yml`
-- Sanitized screenshots
-- App source files only if approved
-- Import templates only if they contain sample data
-- Icons and static assets
-
-Do not upload:
-
-- `*.db`
-- `Backups/`
-- `Logs/`
-- `Exports/`
-- `Reports/`
-- Real employee data
-- Real badge numbers
-- Real incident notes
-- Real AP alert notes
-- Real checkout/return history
-- Network paths or store-specific paths
-- Backup ZIP files
-- Generated Excel exports with live data
-
-## Suggested Public Repo Description
+## Suggested Repo Description
 
 ```text
-Documentation and release notes for the Macy's AP Accountability System.
+Documentation and release package for the Macy's AP Accountability System.
 ```
 
 ## Suggested Topics
 
 ```text
-asset-tracking, checkout-return, tkinter, sqlite, documentation, windows-desktop
+asset-tracking, checkout-return, tkinter, sqlite, windows-desktop, documentation
 ```
-
-## First Public Issue To Create
-
-Title:
-
-```text
-Add sanitized production screenshots to README gallery
-```
-
-Body:
-
-```text
-Replace placeholder screenshot SVGs with sanitized PNG screenshots:
-- Dashboard
-- Front Desk
-- Assets
-- Add/Edit Asset - Key
-- Add/Edit Asset - Tablet
-- Manager
-- Logs
-- System
-
-Make sure no live employee, badge, incident, AP alert, database path, or network-path details are visible.
-```
-

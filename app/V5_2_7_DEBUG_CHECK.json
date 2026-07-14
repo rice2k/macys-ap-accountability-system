@@ -1,0 +1,39 @@
+{
+  "python_syntax_check": "PASS",
+  "self_test_pass": true,
+  "deep_tests": [
+    [
+      "module_import",
+      true
+    ],
+    [
+      "method_show_data_location",
+      true
+    ],
+    [
+      "method_open_data_folder",
+      true
+    ],
+    [
+      "method_change_data_location",
+      true
+    ],
+    [
+      "method_dashboard_health_lines",
+      true
+    ]
+  ],
+  "checks": {
+    "dashboard_no_data_file_line": true,
+    "dashboard_no_show_data_button": true,
+    "system_has_data_section": true,
+    "system_data_section_once": true,
+    "system_buttons_once": true,
+    "system_auto_shows_data": true,
+    "syntax": true,
+    "selftest": true,
+    "deep_all_pass": true
+  },
+  "self_test_stdout": "Macy's AP v5 Self Test\n========================================================================\nOverall: PASS\n\nPASS  create_database\nPASS  default_admin\nPASS  default_asset\nPASS  checkout\nPASS  return\nPASS  audit_error\nPASS  cleanup\n",
+  "syntax_stderr": "Spreadsheet runtime warmup failed during python startup\nTraceback (most recent call last):\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py\", line 26, in warm_spreadsheet_runtime_on_startup\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/spreadsheet_warmup.py\", line 785, in warm_spreadsheet_runtime\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/spreadsheet_warmup.py\", line 720, in _warm_feature_flows\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/spreadsheet_warmup.py\", line 704, in _warm_collaboration_flows\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/generated/interface/models.py\", line 48821, in hydrate_crdt_from_proto\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/rpc/remote.py\", line 747, in __call__\n  File \"/tmp/tmp.9eeVjt35CN/artifact_tool_v2-2.7.5/artifact_tool/rpc/client.py\", line 150, in call\nartifact_tool.rpc.client.RemoteError: hydrateCrdtFromProto requires an empty collaborative document.\n"
+}

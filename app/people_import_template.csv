@@ -1,0 +1,5 @@
+﻿employee_id,badge,first_name,last_name,department,status,shift,role,notes
+F984717,88984717,Christopher,Schumacher,Asset Protection,Active,Default,Admin,Example row - keep Admin only if importing as Admin
+F1001,881001,Jane,Doe,Receiving,Active,Day,Employee,Example regular employee
+F1002,881002,Alex,Frontdesk,Asset Protection,Active,Day,Front Desk,Example front desk user
+F1003,881003,John,Smith,Receiving,Active,Night,AP Operator,Example operator

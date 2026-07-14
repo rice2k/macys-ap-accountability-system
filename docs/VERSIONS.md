@@ -7,10 +7,22 @@ The current app version is v5.2.7. The package history below is based on the ava
 | Field | Value |
 | --- | --- |
 | Current version | v5.2.7 |
-| Current package | Macys_AP_Beta_v5_2_7_Asset_Entry_Improved.zip |
-| Current source | `macys_ap_v5_2_7.py` |
-| Export helper | `macys_ap_export.py` |
+| Current package | `Macys_AP_v5_2_7_Flow_Visual_Polish_20260713.zip` |
+| Package build date | July 13, 2026 |
+| GitHub docs update | July 14, 2026 |
+| Current source | `app/macys_ap_v5_2_7.py` |
+| Export helper | `app/macys_ap_export.py` |
 | Latest validation | Self-test PASS |
+
+## Latest v5.2.7 Focus
+
+- Flow and visual polish.
+- Admin Scan-Only Front Desk Mode.
+- Badge plus item checkout/return without operator login when enabled.
+- Return acceptance by any scanned return-by badge.
+- Manager priorities, backup date/time, backup status, and refresh countdown.
+- Front Desk next-step guidance, quick scan actions, function-key shortcuts, and ready-only action buttons.
+- Public GitHub docs, images, source package folder, data info, and release upload.
 
 ## v5.2.7 Build Timeline
 
@@ -34,6 +46,7 @@ The current app version is v5.2.7. The package history below is based on the ava
 | DOCX Upgrade Complete | Right-click/context menus, selected-row export, expanded log fields, sign-in/page logging context. |
 | DOCX Upgrade Continuation | Direct Manager shortcuts, default asset export type, refresh timer seconds, related log actions. |
 | Asset Entry Improved | Type-specific asset forms, final UI polish, backup/export/log safety improvements, display density, and final self-test PASS. |
+| Flow Visual Polish 20260713 | Front Desk scan-only mode, return-by badge acceptance, manager priorities, quick scan shortcuts, updated public GitHub docs/images/package. |
 
 ## Available Package Inventory
 
@@ -58,84 +71,18 @@ The current app version is v5.2.7. The package history below is based on the ava
 | `Macys_AP_Beta_v5_2_7_DOCX_Upgrade_Complete_20260617.zip` | 2026-06-17 08:01 PM |
 | `Macys_AP_Beta_v5_2_7_DOCX_Upgrade_Continuation_20260617.zip` | 2026-06-17 08:24 PM |
 | `Macys_AP_Beta_v5_2_7_Asset_Entry_Improved.zip` | 2026-06-18 12:53 AM |
+| `Macys_AP_v5_2_7_Flow_Visual_Polish_20260713.zip` | 2026-07-13 11:35 PM |
 
-## Major v5.2.7 Updates
+## Major v5.2.7 Areas
 
-### Asset Entry
-
-- Guided Add/Edit Asset flow.
-- Auto-Fill Name.
-- Save + New.
-- Duplicate checks.
-- Type-specific guidance.
-- Type-specific detail fields.
-- Key ring detail tracking.
-- Tablet IMEI/license/accessory tracking.
-- CSV import validation aligned with manual entry.
-
-### Manager Page
-
-- Last backup date.
-- Last backup time.
-- Backup status.
-- Refresh countdown.
-- Manual refresh.
-- Open and issue asset tables.
-- Manager notifications.
-- AP alert review.
-- Backup/export history shortcuts.
-- Log, audit, error, settings, and admin shortcuts.
-
-### Dashboard
-
-- Larger grouped cards.
-- All Out and Backup status cards.
-- Click-through detail popups.
-- Excel export from detail popups.
-- Compact system health badges.
-- Reduced duplicated search/backup controls.
-
-### Logs And Alerts
-
-- Manager notifications table.
-- AP Alerts table.
-- Alert save/review/resolve workflows.
-- Checkout alert checks.
-- Critical/blocking alert manager override.
-- Wrong-user return manager approval.
-- Rich audit/error fields.
-- Combined log viewer with filters.
-- Archive before old log deletion.
-
-### Exports
-
-- Formatted Excel asset exporter.
-- Export All and Export Type.
-- Report Excel save.
-- Dashboard detail Excel export.
-- Manager notification export.
-- AP alert export.
-- Group user export.
-- Filtered log export.
-- Selected log row export.
-- CSV bundle now includes manager notifications, AP alerts, groups, and settings.
-
-### Permissions
-
-- Database-backed groups.
-- Protected default roles.
-- Group rights editing with reason.
-- Group deletion with reason and replacement group handling.
-- Assign user to group.
-- Permission checks read from database groups.
-
-### UI Polish
-
-- Wider grouped left navigation.
-- Cleaner header and sign-in area.
-- Image-based Macy star/logo.
-- Hover feedback and stronger active-page highlight.
-- Cleaner title/subtitle bars with quick refresh.
-- Improved table headers, row striping, selected rows, and scrollbars.
-- Display density setting.
-- More menus for lower-priority actions.
+- Front Desk checkout and return workflow.
+- Scan-only station mode.
+- Manager visibility and daily priorities.
+- Asset type-specific forms and exports.
+- AP alerts and manager notifications.
+- Logs, audit trail, and error review.
+- Reports and Excel exports.
+- Shared SQLite data location.
+- Backup and restore.
+- Groups and permissions.
+- Public-safe GitHub documentation and visuals.

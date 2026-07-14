@@ -1,33 +1,35 @@
 # Security Notes
 
-This app handles AP operations, employee/user records, asset history, alerts, logs, reports, and backup data. If this repository is public, commit documentation and sanitized samples only.
+This app handles AP operations, employee/user records, asset history, alerts, logs, reports, and backup data. Because this repository is public, commit documentation, approved source files, sanitized visuals, and sample/template files only.
 
-## Sensitive Data
-
-Keep these out of GitHub:
+## Keep Out Of GitHub
 
 - Live SQLite databases.
-- Backup ZIP files.
-- Exported Excel workbooks.
-- Exported reports.
-- Audit/error/system logs.
+- Backup ZIP files containing live data.
+- Exported Excel workbooks with live data.
+- Exported reports with live data.
+- Audit/error/system logs from live operation.
 - Real employee records.
-- Badge numbers.
+- Real badge numbers.
 - AP alert notes.
 - Incident notes.
-- Store/network paths.
+- Store-specific paths.
+- Network paths.
+- Screenshots with live data.
 
 ## Public Repository Safety
 
-- Use a public repository only for approved documentation and approved source files.
-- Keep live operational data outside GitHub.
+- Use sample data in documentation and images.
 - Review screenshots before upload.
-- Use sample data in documentation.
 - Do not include production database files in issues.
+- Do not attach backup/export/log files to issues.
+- Keep release ZIPs public only when they contain approved source/template files and no live data.
 
 ## App Controls
 
-The app includes role-based access, database-backed groups, manager approval for high-risk actions, audit logs, manager notifications, backup/restore, and log archival before cleanup. These controls depend on operators signing in with the correct role and on the database being protected at the file/folder level.
+The app includes role-based access, database-backed groups, protected Admin/Manager actions, audit logs, manager notifications, backup/restore, and log archival before cleanup.
+
+Admin can enable Scan-Only Front Desk Mode. When enabled, checkout/return can run without operator login, but the app still records the scanned employee/return-by badge and labels the action as Scan-Only Front Desk in notes/audit.
 
 ## Reporting Security Issues
 

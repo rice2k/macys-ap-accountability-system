@@ -1,17 +1,14 @@
-# Screenshot Placeholders
+# Screenshot Images
 
-These SVGs are placeholders for the private GitHub page. Replace them with sanitized real PNG screenshots when ready.
+This folder contains public-safe documentation visuals with sample data only.
 
-Recommended final files:
+Included:
 
-- `dashboard.png`
-- `dashboard-detail.png`
-- `front-desk.png`
-- `assets.png`
-- `asset-entry-key.png`
-- `asset-entry-tablet.png`
-- `manager.png`
-- `manager-notifications.png`
-- `logs.png`
-- `system.png`
+- `github-overview.png`
+- `front-desk-scan-only.png`
+- `manager-priorities.png`
+- `asset-entry-details.png`
+- `data-and-backup.png`
+- `release-changelog.png`
 
+Add real sanitized workstation screenshots later only after confirming no live employee, badge, AP alert, incident, database path, network path, backup, export, or log data is visible.

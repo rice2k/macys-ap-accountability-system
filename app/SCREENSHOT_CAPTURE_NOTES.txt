@@ -1,0 +1,30 @@
+Macy's AP Accountability System
+Screenshot Capture Notes After Flow Polish
+
+Use sample/demo data only. Do not capture live employees, badge numbers, AP alerts, incidents, database paths, backup paths, or network paths.
+
+Recommended screenshots:
+1. Front Desk - New Checkout mode with the next-step banner visible.
+2. Front Desk - Return Mode after pressing F3 or clicking Return Item.
+3. Front Desk - selected employee, selected asset, due time, and ready-to-check-out state.
+4. Front Desk - blocked/warning state with amber or red banner.
+5. Manager - Today's Priorities strip.
+6. Manager - Only show problems enabled.
+7. Manager - backup status and refresh countdown.
+8. Assets - type-specific asset list and selected asset summary.
+9. Add/Edit Asset - Key details.
+10. Add/Edit Asset - Tablet details.
+11. Logs - filtered log view.
+12. System - Reset Demo Data and Settings area.
+
+Suggested demo scans:
+- Employee badge: 880001
+- Key asset: DEMO-KEY-001
+- Radio asset: DEMO-RADIO-001
+- Tablet asset: DEMO-TAB-001
+
+Before screenshots:
+1. Turn Training Mode on.
+2. Go to System > Reset Demo Data.
+3. Go to Front Desk.
+4. Use F2/F3/F4/F8/F9 workflows with demo records.

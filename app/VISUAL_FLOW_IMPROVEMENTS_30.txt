@@ -1,0 +1,56 @@
+Macy's AP Accountability System
+Visual Flow + Ease-of-Use Improvement Plan
+
+Implemented in this polish pass:
+- Front Desk now has a large plain-language "next step" banner.
+- Front Desk now has a Quick Scan strip for New Checkout, Return Item, and Next Item Same Employee.
+- Front Desk action buttons now enable only when the action makes sense.
+- Front Desk shows Checkout Mode or Return Mode clearly.
+- Front Desk now has scanner feedback, system beep cues, and function-key shortcuts.
+- Front Desk can export a printable one-page Quick Scan guide.
+- Manager now has a Today's Priorities strip for Backup, Late Returns, Alerts, and Open Assets.
+- Manager priority cards change color when attention is needed.
+- Manager now has an Only Show Problems toggle.
+- System now has a Training Mode demo data reset that only creates/resets DEMO records.
+
+30 visual and workflow improvements implemented:
+
+1. Make the scan box the strongest visual element on Front Desk.
+2. Show one plain "next step" instruction at a time.
+3. Use a visible Checkout Mode / Return Mode badge.
+4. Disable Check Out Item until employee, asset, and due time are ready.
+5. Disable Return Item until a checked-out item is selected.
+6. Add Quick Scan buttons for New Checkout, Return Item, and Next Item Same Employee.
+7. Keep the selected employee while scanning multiple assets for the same person.
+8. Use color-coded step chips for Operator, Employee, Asset, Due Time, and Complete.
+9. Turn warning messages amber instead of mixing them with normal instructions.
+10. Show critical blocks in red only when action is truly blocked.
+11. Use short profile cards for selected employee, selected asset, and return-by person.
+12. Put due presets directly under checkout actions so users do not hunt for them.
+13. Show "scan item first for returns" directly beside Quick Scan.
+14. Use consistent words: employee, asset, return-by person, due time, condition.
+15. Replace vague messages like "Ready" with specific messages like "Scan employee badge first."
+16. Keep lower-priority actions inside More menus.
+17. Give Manager a daily priority row before tables.
+18. Highlight backup status as green when complete and red when needed.
+19. Highlight late returns red only when late returns exist.
+20. Highlight active alerts amber when review is needed.
+21. Show open asset pressure as a quick count before the Open Assets table.
+22. Keep Manager tables below priority and action controls.
+23. Group Manager actions into daily actions, reports, alerts/logs, and setup.
+24. Make report buttons read like outcomes: Current Out, Overdue Report, End of Shift.
+25. Add hover tips to every non-obvious action.
+26. Use consistent table row striping and selected-row color on every page.
+27. Keep status colors consistent across Dashboard, Front Desk, Manager, and Assets.
+28. Show empty-table placeholder rows so users understand no data is available.
+29. Keep screenshots and documentation updated after visual changes. Added screenshot capture notes and a quick-scan guide.
+30. Continue removing clutter from top-level pages so each screen answers: what is happening, what needs attention, what should I click next? Manager and Front Desk now lead with those answers.
+
+Mouse / keyboard / scanner additions:
+- F2: New Checkout.
+- F3: Return Mode.
+- F4: Next Item Same Employee.
+- F8: Check Out Item.
+- F9: Return Item.
+- Esc: Start Over.
+- Scanner success, return mode, and blocked actions flash the next-step banner and use a system beep.

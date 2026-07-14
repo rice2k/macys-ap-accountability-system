@@ -1,0 +1,196 @@
+Macy's AP Accountability System - Beta Version v5.2.7
+
+Changed:
+- Removed database/data file location from Dashboard.
+- Dashboard health box now keeps only operational status like database OK, last backup, late returns, and errors.
+- Database/data file location now displays in System instead.
+- System page keeps one Database / Data File section only.
+- No duplicate data-location buttons.
+- Opening System automatically shows the current data file location in the System output box.
+
+Asset entry improvement:
+- Add/Edit Asset now has a guided entry flow with Auto-Fill Name, Save + New, duplicate checks, and type-specific guidance for keys and radios.
+- CSV asset import now uses the same cleanup and validation rules as manual asset entry.
+- Self-test cleanup now closes the temporary database before removing it, which avoids a Windows file-lock failure.
+
+Final mapping and connection check:
+- Added an internal asset type field map so each asset type uses only the fields that belong to it.
+- Keys keep controlled key number and clear serial/device tag.
+- Radios, scanners, and tablets keep serial/device tag and clear controlled key number.
+- Temp badges, items, and other assets keep only common asset fields.
+- Add/Edit Asset disables fields that do not apply to the selected type.
+- Asset exports now include Export All and Export Type actions from the Assets page.
+- CSV bundle exports now include settings and writes headers even when a table is empty.
+- Header refresh status now shows local/shared mode, refresh interval, latest refresh time, and active data file name.
+- Self-test now checks asset mapping, add/reload, edit/reload, checkout, return, and dashboard count logic.
+
+Manager, asset forms, and Excel upgrade:
+- Manager page now has a dedicated backup status band with last backup date, time, status, refresh countdown, and Refresh Now.
+- Asset records now support structured type-specific details stored in the database as asset_details.
+- Add/Edit Asset now rebuilds its detail fields when the asset type changes.
+- Key rings can track set number, ring serial, number of keys, location, use, and each individual key/access description.
+- Radios, tablets, temp badges, scanners, items, and other assets have their own matching fields.
+- Tablet accessories can be selected and can include a custom Other accessory.
+- Validation now checks required type-specific fields, numeric key counts, and duplicate type-specific asset numbers/serials.
+- Assets page now includes an Excel export option with an asset-type dropdown.
+- Excel export creates a .xlsx workbook organized by asset type.
+- Asset import template now includes type-specific columns and every row is generated from the same column map.
+
+Module cleanup:
+- Excel workbook creation was moved into macys_ap_export.py.
+- Main app now keeps a small write_xlsx wrapper for compatibility while export internals live in the export module.
+- This reduces risk when improving Excel output later because export XML logic is no longer mixed into the main UI/database file.
+
+Text document upgrade pass:
+- Added manager_notifications database table and Manager page notification review box.
+- Added Review/Resolve actions and Excel export for Manager notifications.
+- Added dashboard clickable summary boxes for keys/radios/tablets/temp badges out, late returns, active alerts, and errors today.
+- Added checkout warning checks for AP alert/restriction notes, inactive/manual-review users, no-key notes, restricted/damaged assets, already-out assets, and overdue user items.
+- Returns can be completed by any scanned return-by badge; if the return badge differs from the checkout holder, the app records it in notes/audit without blocking the return.
+- Added saved folder settings for Excel exports, report exports, audit logs, error logs, and system logs.
+- Excel and report exports now use the saved output folders where applicable.
+- Failed login, settings changes, exports, blocked checkouts, overrides, and different-badge returns now create clearer log records.
+
+Group management completion:
+- Added database-backed groups table seeded from the default app roles.
+- Default Employee, Front Desk, AP Operator, Manager, and Admin groups are protected.
+- Permission checks now read group rights from the database.
+- People/User role dropdowns now use the database group list.
+- Added Group Management under System > App Settings.
+- Managers/Admins can add or save groups, change rights, view assigned users, rename non-protected groups with a reason, and delete non-protected groups with a reason.
+- Deleting a group with assigned users warns first and moves affected users to Employee only after confirmation.
+- Group changes create audit entries and Manager notifications.
+
+Flow, layout, and usability upgrade:
+- Left navigation now exposes focused pages for Checkout / Return, Users, Logs, Groups / Permissions, Settings, and Admin Tools while preserving the original System tools.
+- Old encoded menu icons were replaced with clear text tags to avoid garbled display.
+- Dashboard card clicks open filtered detail popups.
+- Reports can now be saved to Excel.
+- Print report output uses the saved report folder.
+- Asset page now includes Duplicate and Export Selected actions.
+- Asset Profile now includes Export Profile and Print Profile actions.
+- Manager page now includes Backup History and Export History shortcuts.
+- Logs page now provides a combined log viewer with type filter, search, notification export, and open log folder action.
+
+Updated text-file follow-up:
+- Added Dashboard All Out and Backup status cards with click-through details.
+- Added filtered Excel export for the Logs page.
+- Added Manager notification note entry.
+- Fixed alias page refresh so Checkout / Return and Users refresh the underlying working pages correctly.
+
+Final updated text-file completion pass:
+- Added a real AP Alerts database table for person and asset alerts.
+- Person Profile and Asset Profile now include Add AP Alert and View AP Alerts.
+- Manager page now includes an AP Alerts review window with status filtering, review/resolve actions, and Excel export.
+- Checkout now checks saved person/asset AP alerts before checkout and logs every alert shown.
+- Critical or blocking AP alerts require Manager/Admin access before checkout can continue.
+- Dashboard Active Alerts now combines New Manager notifications and Active AP alerts.
+- Dashboard detail popups now include Excel export.
+- Logs page now filters by log type, user/source, asset/target, action, date range, and search text.
+- Logs page now includes AP Alerts and can clear old logs only with Admin access, confirmation, and a required reason.
+- Search page now includes AP Alerts.
+- Reports page now includes Alert History, and End of Shift includes Active Alerts.
+- Manager notifications can now be filtered by status, severity, and search text.
+- Group Management now includes direct Assign User to Group and lets managers choose a replacement group before deleting a group with assigned users.
+- App Settings now shows the current Main Data File Location with Change and Open controls.
+- CSV bundle exports and backup ZIPs now include Manager notifications, AP alerts, and groups.
+- Excel exports now include an Export Info worksheet with date, 12-hour time, 24-hour time, exported by, role, and worksheet names.
+- Replaced remaining non-ASCII UI glyphs in the Python source with plain text for safer display on Windows workstations.
+- Self-test now validates AP alert save and resolve logic.
+
+Word document upgrade pass:
+- Restored the banner star/logo to use the bundled image icon instead of a text asterisk.
+- Added shared right-click/context-menu support for Treeview tables.
+- Added right-click menus to Dashboard cards, Dashboard detail popups, Front Desk current-out table, People / Users, Assets, Search, Manager notifications, AP Alerts, Logs, audit-history popups, and Group Management tables.
+- Added Settings path right-click menus for Browse, Open, Reset This Path, and Validate Path.
+- Added selected-log-row Excel export and selected-notification Excel export.
+- Added context actions for adding checkout notes, marking missing accessories, adding/reviewing AP alerts, copying rows, and viewing full details.
+- Expanded audit and error tables with date, 12-hour time, 24-hour time, operator role, active page, status, and computer name fields.
+- Sign-in, sign-out, and page switching now update current logging context.
+- Self-test now validates the richer audit/error log fields.
+
+Continuation polish pass:
+- Manager page now includes direct shortcuts for Log Viewer, Audit Review, Error Review, and Admin Tools.
+- App Settings now includes Default Asset Export Type and Refresh Timer Seconds.
+- Auto-refresh now honors the saved refresh timer when configured, while keeping safe local/shared defaults.
+- Dashboard detail popup context menus can open related asset/user records and related audit logs.
+
+Final document completion pass:
+- Banner star now renders from the bundled star artwork with transparent background cleanup instead of the rough temporary star.
+- App Settings now includes Display Density, and the choice adjusts button/table spacing.
+- Manager notification right-click menus now include View Related Logs.
+- Front Desk current-out right-click menus now include View Log History.
+- Different-badge returns are accepted after badge and item scan and are recorded in notes/audit without requiring Manager/Admin approval.
+- Inactive/restricted/no-key and restricted asset checkout conditions now become Manager/Admin-controlled blocks.
+- Missing, repair, and retired asset checkout requires Manager/Admin approval before checkout can continue.
+- Excel Export Info sheets now include active page/filter/search context where available.
+- Old log cleanup now archives matching log records to Excel before deleting them.
+
+Continuation connection/safety pass:
+- Asset page Export All and Export Type now use the formatted Excel asset exporter instead of the old unused asset CSV path.
+- Removed the unused asset-only CSV export function; the Reports CSV bundle remains available for raw data exports.
+- Group rights changes now require a reason and include old/new rights in the audit detail.
+- Group deletion now asks for the delete reason before moving assigned users to the replacement group.
+- Export filenames now sanitize asset barcodes, group names, and filter names before saving files.
+
+Navigation and header polish pass:
+- Left navigation is wider and grouped into Workflow, Oversight, and Setup sections.
+- Every navigation item now has an icon tag, hover feedback, and a stronger active-page highlight.
+- The top sign-in area is styled as a header bar with colored operator and role badges.
+- The Macy star/logo is aligned inside the main brand area instead of floating separately.
+- Top-level screens now use a cleaner title/subtitle bar with a quick Refresh action.
+- Shared panels/cards now use softer borders and consistent padding.
+
+Front Desk, dashboard, and table polish pass:
+- Front Desk now shows a visible Operator > Employee > Asset > Due Time > Complete scan workflow.
+- Front Desk selected employee/asset/return-by areas now use profile-card layouts with avatar placeholders.
+- Due time, condition, and notes controls were realigned into a cleaner form row.
+- Front Desk action buttons now use clearer styles for scan, checkout, return, and reset.
+- Dashboard cards are larger, less dense, color-coded by category, and visibly clickable.
+- Dashboard cards now include compact icon tags for assets, keys, radios, alerts, errors, and backup status.
+- Table headers, selected rows, and alternating row shading were improved across shared Treeview tables.
+
+Codex UI rework outline pass:
+- Simplified the left navigation to Dashboard, Front Desk, Users, Assets, Search, Manager, Reports, Logs, and System.
+- Moved Groups / Permissions, Settings, and Admin Tools out of the main left navigation and into the System hub.
+- Removed the large Dashboard search bar and Dashboard Backup Now control to reduce duplication.
+- Dashboard cards are grouped into Operations, Alerts / Risk, and System.
+- Dashboard system health is shown as compact badges instead of a text-heavy status block.
+- Users, Assets, Logs, Search, and Manager now use cleaner primary actions plus More menus for secondary tools.
+- Search now treats Audit as a search mode instead of a separate same-weight button.
+- Logs now keeps Search and Export Logs visible while moving notifications, log folder, and archive/clear into More.
+- Group Management rights are grouped into Access, People, Assets, and Admin categories.
+- Shared tables now use controlled separator dragging behavior, consistent scrollbars, alternating rows, and stronger selected-row styling.
+- System sections were renamed and organized as Data & Storage, Backup & Restore, Templates & Imports, App & Security, Diagnostics, and Advanced.
+
+Codex UI rework follow-up pass:
+- Left navigation now uses generated pictogram icons instead of text tags.
+- Sign In and Sign Out now swap visibility based on the current operator state.
+- Training mode now has a compact on/off button style and one shared badge update path.
+- Empty tables now show a non-action placeholder row so row actions do not run against empty state text.
+- Table sorting now reapplies the shared striping and status colors after sort.
+- Full row details and System hub details now use scrollable panes for long text.
+- Manager notification export, refresh, and open-log secondary actions were moved under More.
+
+Flow and visual ease-of-use polish:
+- Front Desk now has a large next-step banner that tells the user what to scan or click next.
+- Front Desk now has a Quick Scan strip for New Checkout, Return Item, and Next Item Same Employee.
+- Front Desk shows Checkout Mode or Return Mode above the scan box.
+- Check Out Item and Return Item buttons are disabled until the screen is ready for that action.
+- Added Admin-only Front Desk Scan-Only Mode so checkout/return can be done with badge scans and item scans without operator login.
+- In Scan-Only Mode, checkout uses employee badge plus item, and return requires return-by badge plus checked-out item.
+- Scan-only checkout and return records are labeled in notes/audit as Scan-Only Front Desk.
+- Return acceptance no longer depends on the original checkout holder; any scanned return-by badge can return the checked-out item.
+- Manager now has a Today's Priorities strip for Backup, Late Returns, Alerts, and Open Assets.
+- Manager priority cards use green, amber, red, and blue highlighting to make daily action items easier to see.
+- Manager now has an Only Show Problems toggle that filters normal rows away.
+- Front Desk now has scanner feedback flashes and function-key shortcuts for mouse/keyboard/scanner stations.
+- Front Desk can export a printable Quick Scan guide.
+- System now includes Reset Demo Data for Training Mode sample records only.
+- Added VISUAL_FLOW_IMPROVEMENTS_30.txt with 30 suggested visual and workflow improvements.
+- The default auto-refresh timer is now 300 seconds / 5 minutes, and Settings offers common refresh presets.
+- Front Desk now includes a More due-time option for custom HH:MM or exact date/time entry.
+- Manager now keeps daily actions visible and moves review/report/history actions into one More menu.
+- Hidden duplicate Groups / Permissions, Settings, and Admin Tools pages are no longer built; those tools route through System.
+- Log and search tables now color key row types such as audit, error, manager, AP alert, person, and asset.
+- Manager refresh countdown now displays minutes and seconds.

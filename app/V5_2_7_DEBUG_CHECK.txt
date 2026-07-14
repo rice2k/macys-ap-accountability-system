@@ -1,0 +1,11 @@
+Macy's AP v5.2.7 Debug Check
+========================================================================
+Python syntax: PASS
+Self-test pass: True
+Dashboard no data file line: True
+Dashboard no Show Data button: True
+System has data section: True
+System data section once: True
+System data buttons once: True
+System auto-shows data output: True
+Deep tests pass: True

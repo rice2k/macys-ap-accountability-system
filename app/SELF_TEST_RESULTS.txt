@@ -1,0 +1,27 @@
+Macy's AP v5 Self Test
+========================================================================
+Overall: PASS
+
+PASS  create_database
+PASS  default_admin
+PASS  groups_seeded
+PASS  default_asset
+PASS  asset_mapping_key
+PASS  asset_mapping_radio
+PASS  asset_mapping_badge
+PASS  asset_add_reload
+PASS  asset_details_reload
+PASS  checkout
+PASS  double_checkout_guard
+PASS  return
+PASS  asset_status_update
+PASS  asset_edit_reload
+PASS  excel_export_write
+PASS  counts
+PASS  dashboard_type_counts
+PASS  manager_notifications
+PASS  ap_alert_saved
+PASS  ap_alert_resolved
+PASS  audit_error
+PASS  rich_log_fields
+PASS  cleanup
