@@ -1,0 +1,35 @@
+# Python/runtime
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+
+# Live app data
+*.db
+*.sqlite
+*.sqlite3
+Backups/
+Logs/
+Exports/
+Reports/
+
+# Generated outputs
+*.xlsx
+*.xls
+*.csv
+*.zip
+*.bak
+*.tmp
+*.log
+
+# Keep sample templates only if intentionally committed.
+!people_import_template.csv
+!assets_import_template.csv
+
+# Local editor/system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
